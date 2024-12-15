@@ -1,89 +1,66 @@
 ---
 layout: cv
-title: Isaac Newtons's CV
+title: Taylor Everett's Resume
 ---
-# Isaac Newton
-Physicist, Mathematician, Cambridge professor.
+# Taylor Everett
+Student and Merchandising Assistant 
 
 <div id="webaddress">
-<a href="isaac@applesdofall.org">isaac@applesdofall.org</a>
-| <a href="http://en.wikipedia.org/wiki/Isaac_Newton">My wikipedia page</a>
-</div>
+<a href="tayloreverett72@gmail.com">tayloreverett72@gmail.com</a>
+
 
 
 ## Currently
 
-Standing on the shoulders of giants
+Working and Studying Business Analytics Full Time
 
 ### Specialized in
 
-Laws of motion, gravitation, minting coins, disliking [Robert Hooke](http://en.wikipedia.org/wiki/Robert_Hooke)
+Power BI, Excel, MySQL, Python
 
 
 ### Research interests
 
-Cooling, power series, optics, alchemy, planetary motions, apples.
+Furthering my knowledge in financial analytics as well as EDI and PowerBI 
+
 
 
 ## Education
 
-`1654-1660`
-__The King's School, Grantham.__
+`2021-2025`
+__BYU-I.__
 
-`June 1661 - now`
-__Trinity College, Cambridge__
-
-- Sizar
-
-`1667 - death`
-__Trinity College, Cambridge__
-
-- Fellow
-
-
-
-## Awards
-
-`2012`
-President, *Royal Society*, London, UK
-
-Associate, *French Academy of Science*, Paris, France
-
-
-
-## Publications
-
-<!-- A list is also available [online](http://scholar.google.co.uk/citations?user=LTOTl0YAAAAJ) -->
-
-### Journals
-
-`1669`
-Newton Sir I, De analysi per æquationes numero terminorum infinitas. 
-
-`1669`
-Lectiones opticæ.
-
-etc. etc. etc.
-
-### Patents
-
-`2012`
-Infinitesimal calculus for solutions to physics problems, [SMBC](http://www.techdirt.com/articles/20121011/09312820678/if-patents-had-been-around-time-newton.shtml) patent 001
 
 
 ## Occupation
 
-`1600`
-__Royal Mint__, London
+`2020-2021`
+__Merchandising Assistant__, Country Supplier
 
-- Warden
-- Minted coins
+-	Ordered a wide variety of product to 55 stores. 
+-	Mid States SPOC for Country Supplier and Oversaw all communication between the two companies  
+-	Was involved in  the Implementation of a new EDI process for stores to recieve product into inventory
+-	Analyze large data to find valuable actionable insights for the replenishment team
+-   Created useful reporting workbooks that auto update upon opening  
 
-`1600`
-__Lucasian professor of Mathematics__, Cambridge University
+
+`2022-2023`
+__Back-Up Receiver__, Cambridge University
+-	Completed Multiple tasks such as checking inventory into our system as well as sending out packages to other stores 
+-	Analyzed all my work was done to perfection or near perfection 
+-	Ensured inventory numbers stay accurate that way our reorder points are correct 
+-	Train others in the position to the same level that I am at that way the work was done the proper way 
+-	Ensuring freight is moving out of the back room in a timely matter 
+-	Collaborated with many individuals at the corporate level to solve problems that come up 
 
 
+`2020-2021`
+__Laborer__, Arylett
 
+-	Completed Multiple tasks from manufacturing to shipping and packaging  
+-	Learned to guide and teach people about the job as they were hired. I went from the new slow guy to one of the fastest workers in a matter of weeks   
+-	Oversaw from start to finish over many products throughout a shift 
+-	Completed tasks 8 hours a day at a constant rate of speed  
 <!-- ### Footer
 
-Last updated: May 2013 -->
+Last updated: December 2024 -->
