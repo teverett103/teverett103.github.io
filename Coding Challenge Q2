@@ -1,7 +1,7 @@
 ---
 title: "Coding Challenge"
 subtitle: "Course DS 250"
-author: "Student Name"
+author: "Taylor Everett"
 format:
   html:
     self-contained: true
@@ -36,13 +36,27 @@ url = "https://github.com/byuidatascience/data4names/raw/master/data-raw/names_y
 names = pd.read_csv(url)
 ```
 
-## Question #:
+## Question #2:
 
-### [Replace with the text from question #]
+### [Fix the series to all be `np.nan` and calculate the standard deviation (2 decimal places):]
 
 ```{python}
 # Question # Code
+import pandas as pd
+import numpy as np
 
+# Original series
+problem = pd.Series(['N/A', 15, 22, 45, 31, -999, 21, 2, 0, 0, 0, 'broken'])
+
+# Replace invalid values with np.nan
+problem_cleaned = pd.to_numeric(problem, errors='coerce')  # Convert to numeric, invalid values become NaN
+problem_cleaned.replace(-999, np.nan, inplace=True)  # Replace -999 with NaN
+
+# Calculate standard deviation (ignoring NaN values)
+std_dev = round(problem_cleaned.std(), 2)
+
+print(f"Cleaned Series:\n{problem_cleaned}")
+print(f"Standard Deviation: {std_dev}")
 
 
 ```
