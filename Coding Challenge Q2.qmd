@@ -27,14 +27,12 @@ format:
 # Read in libraries
 import pandas as pd
 import numpy as np
-import plotly.express as px
+from lets_plot import *
+
+LetsPlot.setup_html(isolated_frame=True)
 ```
 
-```{python}
-# Read in the names data
-url = "https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv"
-names = pd.read_csv(url)
-```
+
 
 ## Question #2:
 
@@ -43,35 +41,18 @@ names = pd.read_csv(url)
 ```{python}
 
 
-# Input ages series
-ages = pd.Series(["10-25", "10-25", "26-35", "56-85", "0-9", "46-55",
-                  "56-85", "0-9", "26-35", "56-85", "0-9", "10-25"])
+problem = pd.Series(['N/A', 15, 22, 45, 31, -999, 21, 2, 0, 0, 0, 'broken'])
 
-# Define age categories
-def categorize_age(age_range):
-    if age_range in ["0-9", "10-25", "26-35"]:
-        return "young"
-    else:
-        return "old"
+# Replace invalid values with np.nan
+problem_cleaned = pd.to_numeric(problem, errors='coerce')  # Convert to numeric, invalid values become NaN
+problem_cleaned.replace(-999, np.nan, inplace=True)  # Replace -999 with NaN
 
-# Apply categorization
-categories = ages.apply(categorize_age)
+# Calculate standard deviation (ignoring NaN values)
+std_dev = round(problem_cleaned.std(), 2)
 
-# Create a DataFrame with random values (to simulate associated data)
-np.random.seed(42)  # For reproducibility
-data = pd.DataFrame({
-    "variable": categories,
-    "value": np.random.randint(10, 90, size=len(ages))  # Random values
-})
+print(f"Cleaned Series:\n{problem_cleaned}")
+print(f"Standard Deviation: {std_dev}")
 
-# Create the box plot
-lets_plot_plot = (ggplot(data) +
-                  geom_boxplot(aes(x='variable', y='value'), fill='blue') +
-                  ggsize(600, 600) +
-                  ggtitle("Age Group Box Plot"))
-
-# Show the plot
-lets_plot_plot
 ```
 
 When done with a question, render it to a `.html` file and upload it for the question. Either re-downolad this template or file -> save as -> a new file name and then replace the text in the question with the new question text.

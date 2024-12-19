@@ -46,35 +46,28 @@ names = pd.read_csv(url)
 ```{python}
 
 
-# Input ages series
-ages = pd.Series(["10-25", "10-25", "26-35", "56-85", "0-9", "46-55",
-                  "56-85", "0-9", "26-35", "56-85", "0-9", "10-25"])
 
-# Define age categories
-def categorize_age(age_range):
-    if age_range in ["0-9", "10-25", "26-35"]:
-        return "young"
-    else:
-        return "old"
 
-# Apply categorization
-categories = ages.apply(categorize_age)
+# Assuming the dataset 'names' contains columns for 'name', 'year', and 'Total'
+russell = names[names['name'] == 'Russell'][['year', 'Total']]
 
-# Create a DataFrame with random values (to simulate associated data)
-np.random.seed(42)  # For reproducibility
-data = pd.DataFrame({
-    "variable": categories,
-    "value": np.random.randint(10, 90, size=len(ages))  # Random values
-})
+# Create a new column 'age' as 2024 - year
+russell['age'] = 2024 - russell['year']
 
-# Create the box plot
-lets_plot_plot = (ggplot(data) +
-                  geom_boxplot(aes(x='variable', y='value'), fill='blue') +
-                  ggsize(600, 600) +
-                  ggtitle("Age Group Box Plot"))
 
-# Show the plot
-lets_plot_plot
+
+
+q = (ggplot(russell, aes(x='age', y='Total')) 
+     + geom_line(color='red')  # Line color red
+     + geom_point(aes(x='age', y='Total'), color='blue', size=5, shape=21, 
+                  data=russell[russell['age'] == 100])  # Highlight the point for 100 years
+     + geom_text(data=russell[russell['age'] == 100], 
+                 mapping=aes(x='age', y='Total', label="'Russell M. Nelson'"), 
+                 vjust=-0.5, hjust=1.5, color='darkblue', angle=0, size=8)  # Add label
+     + ggtitle('How old is someone named Russell?')  # Title
+     + xlab('Age')  # X-axis label
+     + ylab('Frequency')  # Y-axis label
+)
 ```
 
 When done with a question, render it to a `.html` file and upload it for the question. Either re-downolad this template or file -> save as -> a new file name and then replace the text in the question with the new question text.
